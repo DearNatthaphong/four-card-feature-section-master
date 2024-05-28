@@ -1,45 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Four card feature section</title>
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
+    <!-- google font - Poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwindcss  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryRed: 'hsl(0, 78%, 62%)',
+              primaryCyan: 'hsl(180, 62%, 55%)',
+              primaryOrange: 'hsl(34, 97%, 64%)',
+              primaryBlue: 'hsl(212, 86%, 64%)',
+              neutralVeryDarkBlue: 'hsl(234, 12%, 34%)',
+              neutralGrayishBlue: 'hsl(229, 6%, 66%)',
+              neutralVeryLightGray: 'hsl(0, 0%, 98%)'
+            },
+            fontFamily: {
+              poppins: ['Poppins']
+            }
+          }
+        }
+      };
+    </script>
 
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
+    <!-- index.css  -->
+    <link rel="stylesheet" href="./index.css" />
+    <title>Frontend Mentor | Four card feature section</title>
+  </head>
+  <body
+    class="font-poppins flex flex-col justify-center items-center gap-6 min-h-screen"
+  >
+    <header class="text-center w-[311px] xl:w-[540px]">
+      <h1 class="text-2xl font-semibold leading-9">
+        <span class="font-light">Reliable, efficient delivery <br /></span>
+        Powered by Technology
+      </h1>
+      <p class="pt-3 text-neutralGrayishBlue">
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
+      </p>
+    </header>
+    <!-- cards  -->
+    <main
+      class="mt-10 flex flex-col xl:flex-row xl:justify-center xl:items-center gap-6"
+    >
+      <!-- left side: supervisor  -->
+      <section>
+        <article
+          class="relative mx-auto p-6 w-[311px] xl:w-[350px] h-[222px] xl:h-[250px] border border-t-primaryCyan border-t-4 rounded-md drop-shadow-xl"
+        >
+          <!-- drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]" -->
+          <!-- drop-shadow-[0_4px_4px_rgba(213,47,67,0.5)] -->
+          <h1 class="text-xl font-semibold text-neutralVeryDarkBlue">
+            Supervisor
+          </h1>
+          <p class="text-sm font-normal text-neutralGrayishBlue">
+            Monitors activity to identify project roadblocks
+          </p>
+          <img
+            class="absolute bottom-6 right-6"
+            src="./images/icon-supervisor.svg"
+            alt="icon-supervisor"
+          />
+        </article>
+      </section>
+      <!-- main : team builder and Karma-->
+      <section class="flex flex-col gap-6">
+        <article
+          class="relative mx-auto p-6 w-[311px] xl:w-[350px] h-[222px] xl:h-[250px] border border-t-primaryRed border-t-4 rounded-md drop-shadow-xl"
+        >
+          <h1 class="text-xl font-semibold text-neutralVeryDarkBlue">
+            Team Builder
+          </h1>
+          <p class="text-sm font-normal text-neutralGrayishBlue">
+            Scans our talent network to create the optimal team for your project
+          </p>
+          <img
+            class="absolute bottom-6 right-6"
+            src="./images/icon-team-builder.svg"
+            alt="icon-team-builder"
+          />
+        </article>
+        <article
+          class="relative mx-auto p-6 w-[311px] xl:w-[350px] h-[222px] xl:h-[250px] border border-t-primaryOrange border-t-4 rounded-md drop-shadow-xl"
+        >
+          <h1 class="text-xl font-semibold text-neutralVeryDarkBlue">Karma</h1>
+          <p class="text-sm font-normal text-neutralGrayishBlue">
+            Regularly evaluates our talent to ensure quality
+          </p>
+          <img
+            class="absolute bottom-6 right-6"
+            src="./images/icon-karma.svg"
+            alt="icon-karma"
+          />
+        </article>
+      </section>
+      <!-- right side: Calculator  -->
+      <section>
+        <article
+          class="relative mx-auto p-6 w-[311px] xl:w-[350px] h-[222px] xl:h-[250px] border border-t-primaryBlue border-t-4 rounded-md drop-shadow-xl"
+        >
+          <h1 class="text-xl font-semibold text-neutralVeryDarkBlue">
+            Calculator
+          </h1>
+          <p class="text-sm font-normal text-neutralGrayishBlue">
+            Uses data from past projects to provide better delivery estimates
+          </p>
+          <img
+            class="absolute bottom-6 right-6"
+            src="./images/icon-calculator.svg"
+            alt="icon-calculator"
+          />
+        </article>
+      </section>
+    </main>
 
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. <br />
+        Coded by
+        <a href="https://www.frontendmentor.io/profile/DearNatthaphong"
+          >Natthaphong Thongphueng</a
+        >.
+      </p>
+    </footer>
+  </body>
 </html>
